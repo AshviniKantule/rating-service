@@ -2,6 +2,8 @@ server:
   port : 8084
 
 spring:
+  application:
+    name: RATING-SERVICE
   datasource:
     url: jdbc:mysql://localhost:3306/microservices
     username: root
@@ -17,6 +19,8 @@ spring:
           dialect: org.hibernate.dialect.MySQL8Dialect
 
 eureka:
+  instance:
+    prefer-ip-address: true
   client:
     register-with-eureka: true
     fetch-registry: true
